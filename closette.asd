@@ -9,13 +9,14 @@
   :description "Closette"
   :version "1.0"
   :author "Gregor Kiczales, et al."
-  :maintainer "Chun Tian (binghe) <binghe.lisp@gmail.com>"
+  :maintainer "Chun Tian (binghe)"
   :license "MIT"
   :components
   ((:file "package")
    (:file "utils"             :depends-on ("package"))
    (:file "closette"          :depends-on ("package" "utils"))
-   (:file "bootstrap"         :depends-on ("closette"))))
+   (:file "bootstrap"         :depends-on ("closette"))
+   (:file "closette-final"    :depends-on ("bootstrap"))))
 
 (defsystem #:closette.tests
   :description "Closette tests"
